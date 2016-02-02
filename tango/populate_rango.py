@@ -8,7 +8,7 @@ from rango.models import Category, Page
 
 
 def populate():
-    python_cat = add_cat('Python')
+    python_cat = add_cat('Python',views=0,likes=0)
 
     add_page(cat=python_cat,
         title="Official Python Tutorial",
@@ -22,7 +22,7 @@ def populate():
         title="Learn Python in 10 Minutes",
         url="http://www.korokithakis.net/tutorials/python/")
 
-    django_cat = add_cat("Django")
+    django_cat = add_cat("Django",views=0,likes=0)
 
     add_page(cat=django_cat,
         title="Official Django Tutorial",
@@ -37,7 +37,7 @@ def populate():
         url="http://www.tangowithdjango.com/",
         views=10000)
 
-    frame_cat = add_cat("Other Frameworks")
+    frame_cat = add_cat("Other Frameworks",views=0,likes=0)
 
     add_page(cat=frame_cat,
         title="Bottle",
@@ -59,8 +59,8 @@ def add_page(cat, title, url, views=0):
     p.save()
     return p
 
-def add_cat(name):
-    c = Category.objects.get_or_create(name=name)[0]
+def add_cat(name,views=0,likes=0):
+    c = Category.objects.get_or_create(name=name,views=views,likes=likes)[0]
     return c
 
 # Start execution here!
