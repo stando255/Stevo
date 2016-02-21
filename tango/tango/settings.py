@@ -107,3 +107,5 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+LOGIN_URL = '/rango/login/'
