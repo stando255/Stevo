@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../../static/slango.css" />
+
+    <meta charset="UTF-8">
+    <title>Slango Tango</title>
+
+</head>
+
+<body>
+
+    <h1> Slango!!</h1>
+
+        {% if user %}
+        <h2>Yo {{ user_name }}</h2>
+        {% endif %}
+
+        <p>Trending:</p>
+
+        <ul class="trending">
+        {% for trend in trending %}
+            <li><p>{{ trend.word }}</p></li>
+        {% endfor %}
+        </ul>
+
+        <p>Just in:</p>
+
+        <ul class="latest">
+
+        {% for last in latest %}
+        <li><p>{{ last.word }}</p></li>
+        {% endfor %}
+        </ul>
+
+</body>
+</html>

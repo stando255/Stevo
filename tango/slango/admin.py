@@ -10,6 +10,9 @@ class SlangAdmin(admin.ModelAdmin):
 class CommentsAdmin(admin.ModelAdmin):
     list_display = ('user', 'slang', 'score')
 
+class SlugAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug':('username',)}
+
 admin.site.register(User)
 admin.site.register(Slang)
 admin.site.register(Comments)

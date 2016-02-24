@@ -19,6 +19,7 @@ def populate():
 
 def add_user(username, email, password):
     u = User.objects.get_or_create(username=username,email=email,password=password)[0]
+    u.save()
     return u
 
 def add_slang(user, word, example, trending_score, date_added):
