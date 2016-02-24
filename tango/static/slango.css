@@ -1,0 +1,6 @@
+body{background-color:blue;}
+h1{font-family:"Arial"; color:white; font-size:36px;}
+h2{font-family:"Arial"; color:white; font-size:24px;}
+
+ul.trending{font-family:"Comic sans MS"; color:red; font-size:16px;}
+ul.latest{font-family:"Comic sans MS"; color:orange; font-size:16px;}

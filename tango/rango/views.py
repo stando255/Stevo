@@ -17,6 +17,10 @@ def index(request):
     # Render the response and send it back!
     return render(request, 'rango/index.html', context_dict)
 
+def about(request):
+    context_dict = {}
+    return render(request,'rango/about.html',context_dict)
+
 def category(request, category_name_slug):
 
     # Create a context dictionary which we can pass to the template rendering engine.
